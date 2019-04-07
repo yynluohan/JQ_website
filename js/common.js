@@ -15,20 +15,6 @@
 		return searchArray[index + 1];
 	}
 
-
-  //设置一些公共的事件
-  $(function(){
-    //设置logo的位置
-    var offsetLeft = parseInt($('.roof-text').css('paddingLeft'));
-    $('.nav-logo').css('marginLeft',offsetLeft);
-
-    //设置面包屑的位置
-    if(location.pathname.indexOf('index.html') == -1){
-			$('.common_crumbs').css('marginLeft',offsetLeft);
-		}
-
-  })
-
 	//当设备屏幕小于1800时
 	$(function(){
 		if($(window).width() > 1800){
@@ -97,6 +83,15 @@
 	});
 
 	function renderCommom(){
+		//设置logo的位置
+    var offsetLeft = parseInt($('.roof-text').css('paddingLeft'));
+    $('.nav-logo').css('marginLeft',offsetLeft);
+
+    //设置面包屑的位置
+    if(location.pathname.indexOf('index.html') == -1){
+			$('.common_crumbs').css('marginLeft',offsetLeft);
+		}
+
 		//首页鼠标移动到app下载、预约门店时
 		 $('.fixed-content .fixed-content-item').on({
 			 mouseover:function(){

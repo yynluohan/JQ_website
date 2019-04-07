@@ -1,0 +1,416 @@
+/* 旋转部分 */
+.index_three_container {
+  width:100%;
+  position: relative;
+  display: flex;
+  justify-content:space-around;
+  padding:2.5em 0;
+}
+
+.index_three_wrap {
+  -webkit-perspective:600;
+  -moz-perspective:600;
+  -ms-perspective:600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:30%;
+}
+
+.index_three_wrap .text {
+  margin-top:0.5em;
+}
+
+.index_three_image {
+  width: 100%;
+}
+
+/* 整个容器，包括透视 */
+.flip-container {
+    width: 100%;
+    margin-right: 0.5em;
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -webkit-transition:0.8s;
+    -moz-transition:0.8s;
+    -ms-transition:0.8s;
+    -o-transition:0.8s;
+    transition:0.8s;
+}
+
+/* 鼠标放上去的时候翻转 */
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width:100%;
+}
+
+.front img, .back img {
+    width:100%;
+}
+
+/* 翻转速度设置 */
+.flipper {
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    position: relative;
+    width:100%;
+    height:100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+}
+
+/* 翻转页的时候隐藏背面 */
+.front, .back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility:hidden;	/* Chrome 和 Safari */
+    -moz-backface-visibility:hidden; 	/* Firefox */
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+}
+
+/* 前面板放在上面 */
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+/* 背面初始的时候隐藏 */
+.back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+
+/* 三部曲 */
+.index_trilogy {
+  border:2px solid #d9cba7;
+  margin:2em auto;
+  padding:1em 0;
+}
+
+.index_trilogy_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.685rem;
+  font-weight: bold;
+  padding:1em 0;
+}
+
+.index_trilogy_header img {
+  width: 120px;
+}
+
+.index_trilogy_header_name {
+  color:#b99c55;
+  margin:0 0.1em;
+}
+
+.index_trilogy_three  {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  width:88%;
+  margin:0 auto;
+}
+
+.index_trilogy_three_arrow {
+  height: 17px;
+}
+
+.index_trilogy_three_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+  width:24%;
+}
+
+.index_trilogy_three_item>div {
+  position: relative;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.index_trilogy_three_item img {
+  width:100%;
+}
+
+.index_trilogy_three_item a {
+  position: absolute;
+  /* top: 16%; */
+  width: 69%;
+  /* height:69%; */
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index_trilogy_three_item .item_bg {
+  /* position:relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  cursor: pointer;
+}
+
+.index_trilogy_three_item .item_bg{
+    transition: all 0.2s;
+}
+
+.index_trilogy_three_item .item_bg:hover {
+  transform: scale(1.15);
+}
+
+.index_trilogy_three_item span {
+  margin:1em 0;
+}
+
+.index_trilogy_three_datail {
+  margin:1em auto;
+  text-align: center;
+  background-color: #000;
+  color:#fff;
+  width:90px;
+  padding:0.5em 1.2em;
+  font-size: 1rem;
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.index_trilogy_three_datail:hover,
+.index_trilogy_three_datail:active {
+  background-color: #000c;
+}
+
+/* 图片集展示  */
+.index_photo_gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  width:100%;
+}
+
+.index_photo_gallery .item1 {
+  width: 30%;
+  max-width:362px;
+  max-height: 580px;
+  overflow: hidden;
+  position: relative;
+}
+
+.index_photo_gallery .item1 img {
+  width:100%;
+}
+
+.index_photo_gallery_leftimg1,
+.index_photo_gallery_leftimg2,
+.index_photo_gallery_leftimg3 {
+  transition: all 0.2s linear;
+}
+
+.index_photo_gallery .item1:hover .index_photo_gallery_leftimg1 {
+  transform: scale(1.1);
+}
+
+.index_photo_gallery_left {
+  transition: all 0.2s linear;
+  position: absolute;
+  top:0px;
+  max-width:362px;
+  max-height: 583px;
+  width: 100%;
+  height: 100%;
+}
+
+.index_photo_gallery_left>div {
+  margin: 4em 2em;
+}
+
+.index_photo_gallery_left .text1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.index_photo_gallery_left .text2 {
+  margin:0.5em 0;
+  font-size: 0.8rem;
+}
+
+.index_photo_gallery_left .text3 {
+  height:3px;
+  width:35px;
+  background-color: #000;
+  margin: 0.5em 0 2em 0;
+}
+
+.index_photo_gallery_left .text4 {
+  font-size: 1rem;
+}
+
+.index_photo_gallery_left .text6 {
+  background-color: #fff;
+  color:#000;
+  padding:0.6em 1.5em;
+  display: inline-block;
+  margin-top: 30%;
+  text-decoration: none;
+}
+
+.index_photo_gallery_right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  align-content: space-between;
+  max-height:583px;
+  max-width: 820px;
+  width: 70%;
+}
+
+.index_photo_gallery_right a {
+  color:#000;
+}
+
+.index_photo_gallery_right_first {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.index_photo_gallery_right_first>div {
+  width: calc(50% - 4px);
+  max-width:402px;
+  max-height:285px;
+  overflow: hidden;
+  position: relative;
+}
+
+.index_photo_gallery_right_first div:first-child {
+  margin-right: 8px;
+}
+
+.index_photo_gallery_right_first>div img {
+  width:100%;
+}
+
+.index_photo_gallery_right_first>div:hover .index_photo_gallery_leftimg2{
+  transform: scale(1.1);
+}
+
+.index_photo_gallery_right_first .image1 {
+  width:100%;
+  position: absolute;
+  top:0px;
+  text-align: right;
+  transition: all 0.2s linear;
+}
+
+.index_photo_gallery_right_first>div .image1 div:first-child{
+  padding:10% 7% 0 0;
+}
+
+.index_photo_gallery_right_first>div .image1 div:last-child{
+  font-size: 1.3rem;
+  margin:0.5em 7% 0 0;
+  font-weight: bold;
+}
+
+.index_photo_gallery_right_first .image2 {
+  max-width:402px;
+  max-height:250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index_photo_gallery_right .item3 {
+  max-width:812px;
+  max-height:290px;
+  overflow: hidden;
+  position: relative;
+}
+
+.index_photo_gallery_right .item3 img {
+  width:100%;
+}
+
+.index_photo_gallery_right .item3:hover .index_photo_gallery_leftimg3{
+  transform: scale(1.08);
+}
+
+
+.index_photo_gallery_last {
+  max-width:812px;
+  max-height:290px;
+  position: absolute;
+  top:0px;
+  width:100%;
+  height:100%;
+}
+
+.index_photo_gallery_last div{
+  margin-left:5%;
+  position: relative;
+  color:#000;
+}
+
+.index_photo_gallery_last .text1 {
+  padding-top:5%;
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.index_photo_gallery_last .text2 {
+  margin-top:0.5em;
+  font-size: 0.9rem;
+}
+
+.index_photo_gallery_last .text3 {
+  margin-top:15%;
+  font-size: 1rem;
+  margin-left:5%;
+  display: inline-block;
+  text-decoration: none;
+  color:#000;
+}
